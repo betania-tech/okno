@@ -2,7 +2,7 @@
 <html lang="sr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Окно и Окно НС – преузимање</title>
+<title>Окно, Окно НС и Окно ПР – преузимање</title>
 <style>
   body{margin:0;font:16px/1.5 system-ui,Segoe UI,Roboto,sans-serif;color:#111827;background:#f3f4f6}
   .hero{position:relative;background:radial-gradient(circle at 50% 20%,#1e3a8a,#0b1220 70%);color:#fff;padding:56px 20px;text-align:center}
@@ -32,11 +32,14 @@
   .oznaka{display:inline-block;background:var(--boja);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;
     text-transform:uppercase;border-radius:999px;padding:3px 10px}
   .novo{background:#ecfdf5;color:#065f46;border-radius:10px;padding:10px 14px;font-size:14px;margin:12px 0}
-  #okno,.proizvodi a[href="#okno"]{--boja:#1d4ed8} #ns,.proizvodi a[href="#ns"]{--boja:#047857}
-  #ns .btn{background:#047857}
+  #okno,.proizvodi a[href="#okno"]{--boja:#1d4ed8} #ns,.proizvodi a[href="#ns"]{--boja:#047857} #pr,.proizvodi a[href="#pr"]{--boja:#b91c1c}
+  #ns .btn{background:#047857} #pr .btn{background:#b91c1c}
   #ns select{display:block;width:100%;margin:10px 0 12px;padding:9px 10px;font:inherit;font-size:14px;border:1px solid #d1d5db;border-radius:10px;background:#fff;color:inherit}
   .v{display:block;margin-top:8px;color:#6b7280;font-size:12px}
-  #okno .cards,#ns .cards{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .izdanja h3{font-size:16px;margin:14px 0 4px} .izdanja table{width:100%;border-collapse:collapse;font-size:14px}
+  .izdanja td{padding:5px 8px;border-bottom:1px solid #e5e7eb;vertical-align:top} .izdanja td:first-child{white-space:nowrap;font-weight:600}
+  .izdanja td:nth-child(2){white-space:nowrap;color:#6b7280} .izdanja a{margin-right:12px;white-space:nowrap} .izdanja a.opis{color:#6b7280}
+  #okno .cards,#ns .cards,#pr .cards{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
 </style>
 </head>
 <body>
@@ -53,6 +56,7 @@
   <nav class="proizvodi" aria-label="Производи">
     <a href="#okno"><b>Окно</b><span>избори за народне посланике · обрасци НПРС-3/26 и НПРС-4/26</span></a>
     <a href="#ns"><b>Окно НС</b><span>избори за националне савете националних мањина · обрасци ХХНС-5 и ХХНС-6</span></a>
+    <a href="#pr"><b>Окно ПР</b><span>избори за председника Републике · обрасци ИПР-3 и ИПР-4</span></a>
   </nav>
 
   <section id="okno" class="proizvod">
@@ -153,9 +157,41 @@
        <a href="mailto:hello@betania.io">hello@betania.io</a>.</p>
   </section>
 
+  <section id="pr" class="proizvod">
+    <span class="oznaka">Избори за председника Републике</span>
+    <h2>Окно ПР</h2>
+    <p>Посебно издање истог програма за <b>председничке изборе</b>: уместо изборне листе попуњава <b>изјаву бирача да подржава
+       предлог кандидата за председника Републике</b> (званични образац ИПР-3/22) чим се лична карта стави у читач и води списак
+       бирача за РИК (ИПР-4/22, извоз у Excel). У Подешавањима се уносе име и презиме кандидата, предлагач (странка / коалиција / група грађана) и датум
+       избора. Инсталира се <b>упоредо</b> са Окном и Окном НС (други назив, фолдер и евиденција) – у црвеном руху.</p>
+    <div class="cards" style="margin:12px 0">
+      <div class="card"><h2>Windows 10 / 11</h2><p>Инсталациони чаробњак (.exe), Окно ПР.</p>
+        <a class="btn" id="dlPrWin" href="https://github.com/lemara98/okno/releases/download/pr-v1.0.0/OknoPR-setup.exe">⬇ Окно ПР за Windows</a> <small class="v" id="vPrWin"></small></div>
+      <div class="card"><h2>macOS</h2><p>Инсталациони пакет (.pkg), Окно ПР.</p>
+        <a class="btn" id="dlPrMac" href="https://github.com/lemara98/okno/releases/download/pr-v1.0.0/OknoPR.pkg">⬇ Окно ПР за macOS</a> <small class="v" id="vPrMac"></small></div>
+      <div class="card"><h2>Linux (Ubuntu / Debian)</h2><p>Пакет .deb – дупли клик или <code>sudo apt install ./okno-pr_amd64.deb</code></p>
+        <a class="btn" id="dlPrDeb" href="https://github.com/lemara98/okno/releases/download/pr-v1.0.0/okno-pr_amd64.deb">⬇ Окно ПР .deb</a> <small class="v" id="vPrDeb"></small></div>
+      <div class="card"><h2>Без чипа?</h2><p>За бираче са старом личном картом без чипа: образац ИПР-3/22 као PDF са пољима за попуњавање на рачунару.</p>
+        <a class="btn" id="dlPrPdf" href="https://github.com/lemara98/okno/releases/download/pr-v1.0.0/IPR-3-22-izjava-biraca-popunjiva.pdf">⬇ Попуњив образац (PDF)</a></div>
+    </div>
+    <div class="note">Избори за председника Републике још нису расписани – датум избора се уноси у Подешавањима кад буду. Програм
+      користи званичне обрасце РИК-а из 2022 (ИПР-3/22 и ИПР-4/22); ознака обрасца је уграђена и не подешава се. Кад РИК објави
+      обрасце за 2026, стиже нова верзија – подешавања и евиденција остају. Верзија: <span id="prVer">pr-v1.0.0</span>.</div>
+    <p><b>Лиценца:</b> Окно ПР се лиценцира посебно – кључ за Окно или Окно НС <b>не важи</b> за Окно ПР.
+       Без кључа ради као пробна верзија, исто као Окно; за кључ за Окно ПР пишите на
+       <a href="mailto:hello@betania.io">hello@betania.io</a>.</p>
+  </section>
+
+  <section id="izdanja">
+    <h2>Сва издања</h2>
+    <p>Свако објављено издање Окна, Окна НС и Окна ПР са инсталатерима и обрасцима – ако затреба старија верзија.
+       Најновије издање је на врху сваког производа; подешавања и евиденција остају при сваком ажурирању.</p>
+    <div id="listaIzdanja" class="izdanja">Учитавам списак издања…</div>
+  </section>
+
   <section>
-    <h2>Пробна верзија и лиценца – важи за оба производа</h2>
-    <p>Инсталација је бесплатна и ради као <b>пробна верзија</b>: сва функционалност је доступна један дан од првог покретања (највише 25 правих штампи); демо картица и симулација штампе раде и после тога. За пуну верзију унесите лиценцни кључ у <i>Подешавања → Лиценца</i>. Кључ важи до датума који је у њему уписан – до краја изборног циклуса. Окно и Окно НС су посебни производи: сваки има свој кључ.</p>
+    <h2>Пробна верзија и лиценца – важи за све производе</h2>
+    <p>Инсталација је бесплатна и ради као <b>пробна верзија</b>: сва функционалност је доступна један дан од првог покретања (највише 25 правих штампи); демо картица и симулација штампе раде и после тога. За пуну верзију унесите лиценцни кључ у <i>Подешавања → Лиценца</i>. Кључ важи до датума који је у њему уписан – до краја изборног циклуса. Окно, Окно НС и Окно ПР су посебни производи: сваки има свој кључ.</p>
     <div class="note">Пре прве употребе: у Подешавањима унесите назив изборне листе, подносиоца и датум избора.
       Пробајте ток дугметом „Демо картица“ пре него што прикључите читач.</div>
   </section>
@@ -182,7 +218,7 @@
     <p id="kontakt">Софтвер израдила <b>Betania</b>. За лиценцни кључ, питања и подршку: <a href="mailto:hello@betania.io">hello@betania.io</a></p>
   </section>
 </main>
-<footer>Окно <span id="ver">–</span> · Окно НС <span id="nsVer2">–</span> · © Betania · <a href="mailto:hello@betania.io">hello@betania.io</a></footer>
+<footer>Окно <span id="ver">–</span> · Окно НС <span id="nsVer2">–</span> · Окно ПР <span id="prVer2">–</span> · © Betania · <a href="mailto:hello@betania.io">hello@betania.io</a></footer>
 <script>
   // Podesite jednom: GitHub korisnik/organizacija i ime repozitorijuma u kome se objavljuju Release paketi.
   const REPO = "lemara98/okno";
@@ -199,8 +235,8 @@
     sel.addEventListener('change', osvezi); osvezi();
   })();
   // Сваки линк иде на најновије издање које ТАЈ фајл заиста има – издање може бити само за неке системе
-  // (нпр. v1.0.4 само Linux). Окно: тагови v*, Окно НС: pre-release са таговима ns-v*. Резерва су линкови изнад.
-  fetch(`https://api.github.com/repos/${REPO}/releases?per_page=40`).then(r=>r.json()).then(list=>{
+  // (нпр. v1.0.4 само Linux). Окно: тагови v*, Окно НС: pre-release са таговима ns-v*, Окно ПР: pr-v*. Резерва су линкови изнад.
+  fetch(`https://api.github.com/repos/${REPO}/releases?per_page=100`).then(r=>r.json()).then(list=>{
     const sva = (Array.isArray(list)?list:[]).filter(r => r.tag_name && !r.draft);
     const veza = (izdanja, id, vid, fajl) => {
       const r = izdanja.find(r => (r.assets||[]).some(a => a.name === fajl && a.state === 'uploaded'));
@@ -211,17 +247,34 @@
     };
     // GitHub API не враћа издања по датуму ни по верзији (нпр. ns-v1.0.10 стиже иза ns-v1.0.9), па се овде
     // сортира по броју верзије, бројчано: 1.0.10 је новије од 1.0.9.
-    const brojevi = t => t.replace(/^(ns-)?v/, '').split('.').map(n => parseInt(n, 10) || 0);
+    const brojevi = t => t.replace(/^(ns-|pr-)?v/, '').split('.').map(n => parseInt(n, 10) || 0);
     const novije = (a, b) => { const x = brojevi(a.tag_name), y = brojevi(b.tag_name);
       for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (y[i] || 0) - (x[i] || 0); if (d) return d; }
       return 0; };
-    const okno = sva.filter(r => /^v\d/.test(r.tag_name)).sort(novije), ns = sva.filter(r => r.tag_name.startsWith('ns-v')).sort(novije);
+    const okno = sva.filter(r => /^v\d/.test(r.tag_name)).sort(novije), ns = sva.filter(r => r.tag_name.startsWith('ns-v')).sort(novije),
+          pr = sva.filter(r => r.tag_name.startsWith('pr-v')).sort(novije);
     veza(okno, 'dlWin', 'vWin', 'Okno-setup.exe'); veza(okno, 'dlMac', 'vMac', 'Okno.pkg');
     const vDeb = veza(okno, 'dlDeb', 'vDeb', 'okno_amd64.deb'); veza(okno, 'dlPdf', null, 'NPRS-3-26-izjava-biraca-popunjiva.pdf');
     veza(ns, 'dlNsWin', 'vNsWin', 'OknoNS-setup.exe'); veza(ns, 'dlNsMac', 'vNsMac', 'OknoNS.pkg'); veza(ns, 'dlNsDeb', 'vNsDeb', 'okno-ns_amd64.deb');
     if(ns.length){ document.getElementById('nsVer').textContent = ns[0].tag_name; document.getElementById('nsVer2').textContent = ns[0].tag_name; }
+    veza(pr, 'dlPrWin', 'vPrWin', 'OknoPR-setup.exe'); veza(pr, 'dlPrMac', 'vPrMac', 'OknoPR.pkg'); veza(pr, 'dlPrDeb', 'vPrDeb', 'okno-pr_amd64.deb');
+    veza(pr, 'dlPrPdf', null, 'IPR-3-22-izjava-biraca-popunjiva.pdf');
+    if(pr.length){ document.getElementById('prVer').textContent = pr[0].tag_name; document.getElementById('prVer2').textContent = pr[0].tag_name; }
     if(okno.length){ document.getElementById('ver').textContent = okno[0].tag_name; document.getElementById('ver2').textContent = okno[0].tag_name; }
-  }).catch(()=>{});
+    // Сва издања: по производу, најновије прво, са инсталатерима (стални називи) и обрасцима
+    const lista = document.getElementById('listaIzdanja');
+    if(lista){
+      const datum = d => d ? `${d.slice(8,10)}.${d.slice(5,7)}.${d.slice(0,4)}.` : '';
+      const NAZIV = {'Okno-setup.exe':'Windows','Okno.pkg':'macOS','okno_amd64.deb':'Linux .deb','OknoNS-setup.exe':'Windows','OknoNS.pkg':'macOS',
+        'okno-ns_amd64.deb':'Linux .deb','OknoPR-setup.exe':'Windows','OknoPR.pkg':'macOS','okno-pr_amd64.deb':'Linux .deb',
+        'Okno-uputstvo.pdf':'Упутство (PDF)','NPRS-3-26-izjava-biraca-popunjiva.pdf':'Попуњив образац НПРС-3','IPR-3-22-izjava-biraca-popunjiva.pdf':'Попуњив образац ИПР-3'};
+      const veze = r => { const a = (r.assets||[]).filter(x => x.state === 'uploaded'), m = a.filter(x => NAZIV[x.name]);
+        return (m.length ? m : a).map(x => `<a href="${x.browser_download_url}">${NAZIV[x.name] || x.name}</a>`).join(''); };
+      const blok = (naslov, izd) => izd.length ? `<h3>${naslov}</h3><table>` + izd.map(r =>
+        `<tr><td>${r.tag_name}</td><td>${datum(r.published_at)}</td><td>${veze(r)}<a class="opis" href="${r.html_url}">опис издања</a></td></tr>`).join('') + '</table>' : '';
+      lista.innerHTML = (blok('Окно', okno) + blok('Окно НС', ns) + blok('Окно ПР', pr)) || 'Још нема објављених издања.';
+    }
+  }).catch(()=>{ const l = document.getElementById('listaIzdanja'); if(l) l.innerHTML = `Списак издања: <a href="https://github.com/${REPO}/releases">github.com/${REPO}/releases</a>`; });
 </script>
 <script>
 // Писмо странице: ћирилица је подразумевана, латиница се бира дугметом (памти се) или везом ?pismo=lat.
