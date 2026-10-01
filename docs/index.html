@@ -87,6 +87,11 @@
        (ХХНС-5/26, за сваку од 21 мањине која бира непосредно 8. 11. 2026 – двојезично где је прописано, нпр. МАЂНС-5 ћирилица + мађарски)
        и извози списак бирача у РИК-ов Excel образац ХХНС-6. Мањина се бира у Подешавањима. Инсталира се <b>упоредо</b> са Окном
        (други назив, фолдер и евиденција).</p>
+    <div class="novo"><b>Ново у верзији 1.0.16 – захтев за упис у посебан бирачки списак као у личној карти.</b> Захтев
+      (Образац 2) који се нуди кад бирач није у посебном бирачком списку сада се попуњава онако како пише у личној карти:
+      име без транскрипције и заграда, адреса у саставу са извода (дуга адреса прелази у други ред и више не излази ван
+      листа), а на црте „ОПШТИНА / ГРАД“ иде права јединица локалне самоуправе. У Подешавањима је додат <b>пример захтева
+      за сваку мањину</b>; уз „блокирај штампу“ захтев се и даље нуди, а Enter више не заобилази забрану.</div>
     <div class="novo"><b>Ново у верзији 1.0.15 – извод података са личне карте истоветан Челику.</b> Извод који се штампа уз
       изјаве сада изгледа тачно као испис МУП-овог читача „Челик“ (латинични натписи, исти распоред и напомене), а подаци иду
       онако како су уписани у чипу. Издања и провера нове верзије су од сада у организацији betania-tech.</div>
@@ -123,11 +128,11 @@
       или само облик са картице. Име које је већ ћирилицом остаје исто.</div>
     <div class="cards" style="margin:12px 0">
       <div class="card"><h2>Windows 10 / 11</h2><p>Инсталациони чаробњак (.exe), Окно НС.</p>
-        <a class="btn" id="dlNsWin" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.15/OknoNS-setup.exe">⬇ Окно НС за Windows</a> <small class="v" id="vNsWin"></small></div>
+        <a class="btn" id="dlNsWin" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.16/OknoNS-setup.exe">⬇ Окно НС за Windows</a> <small class="v" id="vNsWin"></small></div>
       <div class="card"><h2>macOS</h2><p>Инсталациони пакет (.pkg), Окно НС.</p>
-        <a class="btn" id="dlNsMac" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.15/OknoNS.pkg">⬇ Окно НС за macOS</a> <small class="v" id="vNsMac"></small></div>
+        <a class="btn" id="dlNsMac" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.16/OknoNS.pkg">⬇ Окно НС за macOS</a> <small class="v" id="vNsMac"></small></div>
       <div class="card"><h2>Linux (Ubuntu / Debian)</h2><p>Пакет .deb – дупли клик или <code>sudo apt install ./okno-ns_amd64.deb</code></p>
-        <a class="btn" id="dlNsDeb" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.15/okno-ns_amd64.deb">⬇ Окно НС .deb</a> <small class="v" id="vNsDeb"></small></div>
+        <a class="btn" id="dlNsDeb" href="https://github.com/betania-tech/okno/releases/download/ns-v1.0.16/okno-ns_amd64.deb">⬇ Окно НС .deb</a> <small class="v" id="vNsDeb"></small></div>
       <div class="card"><h2>Без чипа?</h2><p>За бираче са старом личном картом без чипа: званични образац изјаве (ХХНС-5/26) као PDF
         са пољима за попуњавање на рачунару. Изаберите националну мањину:</p>
         <select id="selNsPdf" aria-label="Национална мањина">
@@ -157,7 +162,7 @@
     </div>
     <div class="note">Избори за чланове националних савета расписани су за <b>8. 11. 2026</b>; програм користи званичне обрасце РИК-а
       објављене 23. 9. 2026 (<a href="https://www.rik.parlament.gov.rs/tekst/684717/obrasci-za-podnosenje-izbornih-lista-nsnm-2026.php">РИК – обрасци НСНМ 2026</a>).
-      Ако РИК измени или допуни обрасце (нпр. словеначки), стиже нова верзија – подешавања и евиденција остају. Верзија: <span id="nsVer">ns-v1.0.15</span>.</div>
+      Ако РИК измени или допуни обрасце (нпр. словеначки), стиже нова верзија – подешавања и евиденција остају. Верзија: <span id="nsVer">ns-v1.0.16</span>.</div>
     <p><b>Лиценца:</b> Окно НС се лиценцира посебно – кључ за Окно (избори за народне посланике) <b>не важи</b> за Окно НС.
        Без кључа ради као пробна верзија, исто као Окно; за кључ за Окно НС пишите на
        <a href="mailto:hello@betania.io">hello@betania.io</a>.</p>
