@@ -174,20 +174,24 @@
     <p>Посебно издање истог програма за <b>председничке изборе</b>: уместо изборне листе попуњава <b>изјаву бирача да подржава
        предлог кандидата за председника Републике</b> (званични образац ИПР-3/22) чим се лична карта стави у читач и води списак
        бирача за РИК (ИПР-4/22, извоз у Excel). У Подешавањима се уносе име и презиме кандидата, предлагач (странка / коалиција / група грађана) и датум
-       избора. Инсталира се <b>упоредо</b> са Окном и Окном НС (други назив, фолдер и евиденција) – у црвеном руху.</p>
+       избора. Инсталира се <b>упоредо</b> са Окном и Окном НС (други назив, фолдер и евиденција) – у црвеном руху.
+       Од верзије 1.1.0 обрађује и <b>личну карту без чипа</b>: обе стране се снимају веб-камером, подаци се читају са снимка
+       (машински запис са контролним цифрама + OCR), оператер их проверава и потврђује на екрану – па све даље иде као са читачем.</p>
     <div class="cards" style="margin:12px 0">
       <div class="card"><h2>Windows 10 / 11</h2><p>Инсталациони чаробњак (.exe), Окно ПР.</p>
-        <a class="btn" id="dlPrWin" href="https://github.com/betania-tech/okno/releases/download/pr-v1.0.1/OknoPR-setup.exe">⬇ Окно ПР за Windows</a> <small class="v" id="vPrWin"></small></div>
+        <a class="btn" id="dlPrWin" href="https://github.com/betania-tech/okno/releases/download/pr-v1.1.0/OknoPR-setup.exe">⬇ Окно ПР за Windows</a> <small class="v" id="vPrWin"></small></div>
       <div class="card"><h2>macOS</h2><p>Инсталациони пакет (.pkg), Окно ПР.</p>
-        <a class="btn" id="dlPrMac" href="https://github.com/betania-tech/okno/releases/download/pr-v1.0.1/OknoPR.pkg">⬇ Окно ПР за macOS</a> <small class="v" id="vPrMac"></small></div>
+        <a class="btn" id="dlPrMac" href="https://github.com/betania-tech/okno/releases/download/pr-v1.1.0/OknoPR.pkg">⬇ Окно ПР за macOS</a> <small class="v" id="vPrMac"></small></div>
       <div class="card"><h2>Linux (Ubuntu / Debian)</h2><p>Пакет .deb – дупли клик или <code>sudo apt install ./okno-pr_amd64.deb</code></p>
-        <a class="btn" id="dlPrDeb" href="https://github.com/betania-tech/okno/releases/download/pr-v1.0.1/okno-pr_amd64.deb">⬇ Окно ПР .deb</a> <small class="v" id="vPrDeb"></small></div>
-      <div class="card"><h2>Без чипа?</h2><p>За бираче са старом личном картом без чипа: образац ИПР-3/22 као PDF са пољима за попуњавање на рачунару.</p>
-        <a class="btn" id="dlPrPdf" href="https://github.com/betania-tech/okno/releases/download/pr-v1.0.1/IPR-3-22-izjava-biraca-popunjiva.pdf">⬇ Попуњив образац (PDF)</a></div>
+        <a class="btn" id="dlPrDeb" href="https://github.com/betania-tech/okno/releases/download/pr-v1.1.0/okno-pr_amd64.deb">⬇ Окно ПР .deb</a> <small class="v" id="vPrDeb"></small></div>
+      <div class="card"><h2>Без чипа?</h2><p>Окно ПР 1.1.0 сними личну карту без чипа камером и прочита је сам (дугме „Лична карта без чипа“ на почетном екрану;
+        препоручена спољна USB камера 1080p са аутофокусом). Резерва: образац ИПР-3/22 као PDF са пољима за попуњавање на рачунару.</p>
+        <a class="btn" id="dlPrPdf" href="https://github.com/betania-tech/okno/releases/download/pr-v1.1.0/IPR-3-22-izjava-biraca-popunjiva.pdf">⬇ Попуњив образац (PDF)</a></div>
     </div>
     <div class="note">Избори за председника Републике још нису расписани – датум избора се уноси у Подешавањима кад буду. Програм
       користи званичне обрасце РИК-а из 2022 (ИПР-3/22 и ИПР-4/22); ознака обрасца је уграђена и не подешава се. Кад РИК објави
-      обрасце за 2026, стиже нова верзија – подешавања и евиденција остају. Верзија: <span id="prVer">pr-v1.0.1</span>.</div>
+      обрасце за 2026, стиже нова верзија – подешавања и евиденција остају. <b>Ново у 1.1.0:</b> лична карта без чипа (камера + OCR,
+      провера на екрану пре штампе); штампа за такву картицу се увек потврђује, а извод података са личне карте се не штампа. Верзија: <span id="prVer">pr-v1.1.0</span>.</div>
     <p><b>Лиценца:</b> Окно ПР се лиценцира посебно – кључ за Окно или Окно НС <b>не важи</b> за Окно ПР.
        Без кључа ради као пробна верзија, исто као Окно; за кључ за Окно ПР пишите на
        <a href="mailto:hello@betania.io">hello@betania.io</a>.</p>
