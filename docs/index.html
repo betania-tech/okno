@@ -172,36 +172,36 @@
     <span class="oznaka">Избори за председника Републике</span>
     <h2>Окно ПР</h2>
     <p>Посебно издање истог програма за <b>председничке изборе</b>: уместо изборне листе попуњава <b>изјаву бирача да подржава
-       предлог кандидата за председника Републике</b> (званични образац ИПР-3/22) чим се лична карта стави у читач и води списак
-       бирача за РИК (ИПР-4/22, извоз у Excel). У Подешавањима се уносе име и презиме кандидата, предлагач (странка / коалиција / група грађана) и датум
-       избора. Инсталира се <b>упоредо</b> са Окном и Окном НС (други назив, фолдер и евиденција) – у црвеном руху.
+       предлог кандидата за председника Републике</b> (званични образац ИПР-3/26) чим се лична карта стави у читач и води списак
+       бирача за РИК (ИПР-4/26, извоз у Excel). У Подешавањима се уносе име и презиме кандидата и предлагач (странка / коалиција / група грађана); датум
+       избора је уграђен. Инсталира се <b>упоредо</b> са Окном и Окном НС (други назив, фолдер и евиденција) – у црвеном руху.
        Од верзије 1.1.0 обрађује и <b>личну карту без чипа</b>: обе стране се снимају веб-камером, подаци се читају са снимка
        (машински запис са контролним цифрама + OCR), оператер их проверава и потврђује на екрану – па све даље иде као са читачем.
        Од верзије 1.2.0 води и <b>централну евиденцију организације</b>: сваки одштампани потпис иде, уз лиценцни кључ, и у
        централну евиденцију предлагача кандидата, па се на сваком рачунару види збир целе организације – колико различитих
        бирача је потписало. Од верзије 1.3.0 организација има <b>централу и канцеларије на терену</b>: рачунар са кључем
-       централе види све рачунаре и комплетан списак и поставља име кандидата, предлагача и датум избора за све, а пре сваке
+       централе види све рачунаре и комплетан списак и поставља име кандидата и предлагача за све, а пре сваке
        штампе програм проверава да ли је бирач већ потписао на другом рачунару.</p>
     <div class="cards" style="margin:12px 0">
       <div class="card"><h2>Windows 10 / 11</h2><p>Инсталациони чаробњак (.exe), Окно ПР.</p>
-        <a class="btn" id="dlPrWin" href="https://github.com/betania-tech/okno/releases/download/pr-v1.3.0/OknoPR-setup.exe">⬇ Окно ПР за Windows</a> <small class="v" id="vPrWin"></small></div>
+        <a class="btn" id="dlPrWin" href="https://github.com/betania-tech/okno/releases/download/pr-v1.4.0/OknoPR-setup.exe">⬇ Окно ПР за Windows</a> <small class="v" id="vPrWin"></small></div>
       <div class="card"><h2>macOS</h2><p>Инсталациони пакет (.pkg), Окно ПР.</p>
-        <a class="btn" id="dlPrMac" href="https://github.com/betania-tech/okno/releases/download/pr-v1.3.0/OknoPR.pkg">⬇ Окно ПР за macOS</a> <small class="v" id="vPrMac"></small></div>
+        <a class="btn" id="dlPrMac" href="https://github.com/betania-tech/okno/releases/download/pr-v1.4.0/OknoPR.pkg">⬇ Окно ПР за macOS</a> <small class="v" id="vPrMac"></small></div>
       <div class="card"><h2>Linux (Ubuntu / Debian)</h2><p>Пакет .deb – дупли клик или <code>sudo apt install ./okno-pr_amd64.deb</code></p>
-        <a class="btn" id="dlPrDeb" href="https://github.com/betania-tech/okno/releases/download/pr-v1.3.0/okno-pr_amd64.deb">⬇ Окно ПР .deb</a> <small class="v" id="vPrDeb"></small></div>
+        <a class="btn" id="dlPrDeb" href="https://github.com/betania-tech/okno/releases/download/pr-v1.4.0/okno-pr_amd64.deb">⬇ Окно ПР .deb</a> <small class="v" id="vPrDeb"></small></div>
       <div class="card"><h2>Без чипа?</h2><p>Окно ПР сними личну карту без чипа камером и прочита је сам (дугме „Лична карта без чипа“ на почетном екрану;
-        препоручена спољна USB камера 1080p са аутофокусом), а уз изјаву одштампа и копију обе стране картице. Резерва: образац ИПР-3/22 као PDF са пољима за попуњавање на рачунару.</p>
-        <a class="btn" id="dlPrPdf" href="https://github.com/betania-tech/okno/releases/download/pr-v1.3.0/IPR-3-22-izjava-biraca-popunjiva.pdf">⬇ Попуњив образац (PDF)</a></div>
+        препоручена спољна USB камера 1080p са аутофокусом), а уз изјаву одштампа и копију обе стране картице. Резерва: образац ИПР-3/26 као PDF са пољима за попуњавање на рачунару.</p>
+        <a class="btn" id="dlPrPdf" href="https://github.com/betania-tech/okno/releases/download/pr-v1.4.0/IPR-3-26-izjava-biraca-popunjiva.pdf">⬇ Попуњив образац (PDF)</a></div>
     </div>
-    <div class="note">Избори за председника Републике још нису расписани – датум избора се уноси у Подешавањима кад буду. Програм
-      користи званичне обрасце РИК-а из 2022 (ИПР-3/22 и ИПР-4/22); ознака обрасца је уграђена и не подешава се. Кад РИК објави
-      обрасце за 2026, стиже нова верзија – подешавања и евиденција остају. <b>Ново у 1.3.0:</b> централа и канцеларије –
+    <div class="note">Избори за председника Републике расписани су за <b>27. децембар 2026</b>. <b>Ново у 1.4.0:</b> званични
+      обрасци РИК-а за ове изборе – ИПР-3/26 и ИПР-4/26 (прописани 26. 11. 2026); датум избора и ознака обрасца су уграђени
+      у програм и не подешавају се. Ажурирање чува подешавања и евиденцију. <b>Од 1.3.0:</b> централа и канцеларије –
       организација добија кључ централе и кључ за канцеларије на терену; канцеларија види само укупан збир, а централа (дугме
-      „Централа“) све рачунаре и комплетан списак, извози ИПР-4 за целу организацију и поставља име кандидата, предлагача и датум
-      избора за све рачунаре; пре штампе се проверава да ли је бирач већ потписао на другом рачунару организације или код другог
+      „Централа“) све рачунаре и комплетан списак, извози ИПР-4 за целу организацију и поставља име кандидата и предлагача
+      за све рачунаре; пре штампе се проверава да ли је бирач већ потписао на другом рачунару организације или код другог
       предлагача који користи Окно ПР (каже се само да јесте, никад код ког – штампу не блокира). <b>Од 1.2.0:</b> централна
       евиденција организације (шаљу се само подаци које чува и евиденција на рачунару, без кључа се ништа не шаље). <b>Од 1.1.0:</b> лична карта без чипа (камера + OCR, провера на екрану
-      пре штампе); штампа за такву картицу се увек потврђује, а уместо извода се штампа копија обе стране картице. Верзија: <span id="prVer">pr-v1.3.0</span>.</div>
+      пре штампе); штампа за такву картицу се увек потврђује, а уместо извода се штампа копија обе стране картице. Верзија: <span id="prVer">pr-v1.4.0</span>.</div>
     <p><b>Лиценца:</b> Окно ПР се лиценцира посебно – кључ за Окно или Окно НС <b>не важи</b> за Окно ПР.
        Без кључа ради као пробна верзија, исто као Окно; за кључ за Окно ПР пишите на
        <a href="mailto:hello@betania.io">hello@betania.io</a>.</p>
@@ -283,7 +283,7 @@
     veza(ns, 'dlNsWin', 'vNsWin', 'OknoNS-setup.exe'); veza(ns, 'dlNsMac', 'vNsMac', 'OknoNS.pkg'); veza(ns, 'dlNsDeb', 'vNsDeb', 'okno-ns_amd64.deb');
     if(ns.length){ document.getElementById('nsVer').textContent = ns[0].tag_name; document.getElementById('nsVer2').textContent = ns[0].tag_name; }
     veza(pr, 'dlPrWin', 'vPrWin', 'OknoPR-setup.exe'); veza(pr, 'dlPrMac', 'vPrMac', 'OknoPR.pkg'); veza(pr, 'dlPrDeb', 'vPrDeb', 'okno-pr_amd64.deb');
-    veza(pr, 'dlPrPdf', null, 'IPR-3-22-izjava-biraca-popunjiva.pdf');
+    veza(pr, 'dlPrPdf', null, 'IPR-3-26-izjava-biraca-popunjiva.pdf');
     if(pr.length){ document.getElementById('prVer').textContent = pr[0].tag_name; document.getElementById('prVer2').textContent = pr[0].tag_name; }
     if(okno.length){ document.getElementById('ver').textContent = okno[0].tag_name; document.getElementById('ver2').textContent = okno[0].tag_name; }
     // Сва издања: по производу, најновије прво, са инсталатерима (стални називи) и обрасцима
@@ -292,7 +292,7 @@
       const datum = d => d ? `${d.slice(8,10)}.${d.slice(5,7)}.${d.slice(0,4)}.` : '';
       const NAZIV = {'Okno-setup.exe':'Windows','Okno.pkg':'macOS','okno_amd64.deb':'Linux .deb','OknoNS-setup.exe':'Windows','OknoNS.pkg':'macOS',
         'okno-ns_amd64.deb':'Linux .deb','OknoPR-setup.exe':'Windows','OknoPR.pkg':'macOS','okno-pr_amd64.deb':'Linux .deb',
-        'Okno-uputstvo.pdf':'Упутство (PDF)','NPRS-3-26-izjava-biraca-popunjiva.pdf':'Попуњив образац НПРС-3','IPR-3-22-izjava-biraca-popunjiva.pdf':'Попуњив образац ИПР-3'};
+        'Okno-uputstvo.pdf':'Упутство (PDF)','NPRS-3-26-izjava-biraca-popunjiva.pdf':'Попуњив образац НПРС-3','IPR-3-26-izjava-biraca-popunjiva.pdf':'Попуњив образац ИПР-3','IPR-3-22-izjava-biraca-popunjiva.pdf':'Попуњив образац ИПР-3/22'};
       const veze = r => { const a = (r.assets||[]).filter(x => x.state === 'uploaded'), m = a.filter(x => NAZIV[x.name]);
         return (m.length ? m : a).map(x => `<a href="${x.browser_download_url}">${NAZIV[x.name] || x.name}</a>`).join(''); };
       const blok = (naslov, izd) => izd.length ? `<h3>${naslov}</h3><table>` + izd.map(r =>
