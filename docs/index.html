@@ -38,7 +38,7 @@
   .v{display:block;margin-top:8px;color:#6b7280;font-size:12px}
   .izdanja h3{font-size:16px;margin:14px 0 4px} .izdanja table{width:100%;border-collapse:collapse;font-size:14px}
   .izdanja td{padding:5px 8px;border-bottom:1px solid #e5e7eb;vertical-align:top} .izdanja td:first-child{white-space:nowrap;font-weight:600}
-  .izdanja td:nth-child(2){white-space:nowrap;color:#6b7280} .izdanja a{margin-right:12px;white-space:nowrap} .izdanja a.opis{color:#6b7280}
+  .izdanja td:nth-child(2){white-space:nowrap;color:#6b7280} .izdanja a{margin-right:12px;white-space:nowrap} .izdanja a.opis{color:#6b7280} .izdanja .uklonjeno{color:#9ca3af}
   #okno .cards,#ns .cards,#pr .cards{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
 </style>
 </head>
@@ -215,8 +215,9 @@
 
   <section id="izdanja">
     <h2>Сва издања</h2>
-    <p>Свако објављено издање Окна, Окна НС и Окна ПР са инсталатерима и обрасцима – ако затреба старија верзија.
-       Најновије издање је на врху сваког производа; подешавања и евиденција остају при сваком ажурирању.</p>
+    <p>Историјат објављених издања Окна, Окна НС и Окна ПР. Најновије издање је на врху сваког производа; подешавања и
+       евиденција остају при сваком ажурирању. Уз издање чији су инсталатери уклоњени стоји само опис – преузима се
+       текућа верзија.</p>
     <div id="listaIzdanja" class="izdanja">Учитавам списак издања…</div>
   </section>
 
@@ -302,7 +303,7 @@
       const veze = r => { const a = (r.assets||[]).filter(x => x.state === 'uploaded'), m = a.filter(x => NAZIV[x.name]);
         return (m.length ? m : a).map(x => `<a href="${x.browser_download_url}">${NAZIV[x.name] || x.name}</a>`).join(''); };
       const blok = (naslov, izd) => izd.length ? `<h3>${naslov}</h3><table>` + izd.map(r =>
-        `<tr><td>${r.tag_name}</td><td>${datum(r.published_at)}</td><td>${veze(r)}<a class="opis" href="${r.html_url}">опис издања</a></td></tr>`).join('') + '</table>' : '';
+        `<tr><td>${r.tag_name}</td><td>${datum(r.published_at)}</td><td>${veze(r) || '<span class="uklonjeno">инсталатери уклоњени · </span>'}<a class="opis" href="${r.html_url}">опис издања</a></td></tr>`).join('') + '</table>' : '';
       lista.innerHTML = (blok('Окно', okno) + blok('Окно НС', ns) + blok('Окно ПР', pr)) || 'Још нема објављених издања.';
     }
   }).catch(()=>{ const l = document.getElementById('listaIzdanja'); if(l) l.innerHTML = `Списак издања: <a href="https://github.com/${REPO}/releases">github.com/${REPO}/releases</a>`; });
